@@ -2,6 +2,7 @@
 body {
   font-family: "Segoe UI", Roboto, Arial, sans-serif;
   background: linear-gradient(135deg, #f8f9fc, #eef1f7);
+  background : #1D2021;
   margin: 0;
   padding: 20px;
   color: #333;
@@ -10,18 +11,18 @@ body {
 /* Headings */
 h1, h2 {
   text-align: center;
+  color : white;
 }
 
 h1 {
   font-size: 28px;
-  color: #222;
   margin-bottom: 10px;
 }
 
 h2 {
   font-size: 22px;
   margin-bottom: 15px;
-  color: #444;
+  color: gray;
 }
 
 /* Grid Layout */
@@ -50,19 +51,7 @@ h2 {
   background: #f0f8ff;
 }
 
-#backBtn, #uploadBtn { 
-  margin:10px; 
-  padding:10px 18px; 
-  background:#007bff; 
-  color:white; 
-  border:none; 
-  border-radius:6px; 
-  cursor:pointer; 
-} 
-
-#backBtn:hover, #uploadBtn:hover { 
-  background:#0056b3; 
-} 
+#backBtn, #uploadBtn { margin:10px; padding:10px 18px; background:#007bff; color:white; border:none; border-radius:6px; cursor:pointer; } #backBtn:hover, #uploadBtn:hover { background:#0056b3; } #backBtn { display:none; }
 
 #backBtn {
   display: none;
@@ -102,14 +91,7 @@ h2 {
   font-family: monospace;
   font-size: 15px;
   transition: background 0.2s;
+    color : gray;
 }
 
-.hour-row:hover {
-  background: #f1f6ff;
-  border-radius: 4px;
-}
 
-.hour-row div:first-child {
-  font-weight: 600;
-  color: #444;
-}
