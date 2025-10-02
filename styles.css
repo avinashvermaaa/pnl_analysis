@@ -87,11 +87,10 @@ h2 {
   justify-content: space-between;
   align-items: center;
   padding: 10px 15px;
-  border-bottom: 1px dashed #eee;
+  border-bottom: 1px dashed gray;
   font-family: monospace;
   font-size: 15px;
   transition: background 0.2s;
-    color : gray;
+    color : white;
 }
-
 
