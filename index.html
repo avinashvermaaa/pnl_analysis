@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Daily PNL Analysis (UTC-safe)</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <h1>Daily PNL Analysis (UTC date mode)</h1>
+
+  <div style="text-align:center;">
+    <input type="file" id="fileInput" accept=".json" multiple hidden>
+    <button id="uploadBtn">📂 Upload JSON Files</button>
+    <button id="backBtn">⬅ Back</button>
+  </div>
+
+  <div id="summary" style="display:none;"></div>
+  <div id="content" class="grid"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
