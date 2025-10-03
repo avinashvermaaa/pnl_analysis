@@ -8,17 +8,34 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <h1>Daily PNL Analysis (UTC date mode)</h1>
-
-  <div style="text-align:center;">
-    <input type="file" id="fileInput" accept=".json" multiple hidden>
-    <button id="uploadBtn">📂 Upload JSON Files</button>
-    <button id="backBtn">⬅ Back</button>
+  <h1>Daily PNL Analysis</h1>
+    <div id="uploadSection">
+    <button id="uploadBtn">Upload JSON Files</button>
+    <input type="file" id="fileInput" multiple accept=".json" />
   </div>
 
-  <div id="summary" style="display:none;"></div>
+  <div class="option-buttons" id="homeOptions">
+    <button onclick="chooseMode('pnl')">PNL Analysis</button>
+    <button onclick="chooseMode('multiplier')">Multiplier Analysis</button>
+  </div>
+
+  <button id="backBtn">⬅ Back</button>
+
+  <div id="summary" style="display:none"></div>
   <div id="content" class="grid"></div>
+  <div id="multiplierTable" style="display:none">
+    <table>
+      <thead>
+        <tr>
+          <th>Multiplier Group</th>
+          <th id="countHeader">Count</th>
+          <th>Percentage (%)</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+  </div>
 
   <script src="script.js"></script>
-</body>
+  </body>
 </html>
