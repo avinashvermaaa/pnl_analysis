@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,9 +8,10 @@
   <title>Daily PNL Analysis</title>
   <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
   <h1>Daily PNL Analysis</h1>
-    <div id="uploadSection">
+  <div id="uploadSection">
     <button id="uploadBtn">Upload JSON Files</button>
     <input type="file" id="fileInput" multiple accept=".json" />
   </div>
@@ -35,7 +37,10 @@
       <tbody></tbody>
     </table>
   </div>
-
+  <div>
+    <button id="newPageBtn" onclick="window.location.href='./arbc/arbc.html';">Go to ARBC Page</button>
+  </div>
   <script src="script.js"></script>
-  </body>
+</body>
+
 </html>

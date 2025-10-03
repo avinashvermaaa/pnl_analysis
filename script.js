@@ -99,18 +99,17 @@ function showSummary() {
   summaryDiv.style.display = "block";
   summaryDiv.innerHTML = `<h2>Overall Summary</h2>
       <p>Total Records: <strong>${totalGames}</strong></p>
-      <p>Overall PNL: <strong class="${
-        totalPNL >= 0 ? "profit" : "loss"
-      }">${totalPNL.toFixed(2)}</strong></p>
+      <p>Overall PNL: <strong class="${totalPNL >= 0 ? "profit" : "loss"
+    }">${totalPNL.toFixed(2)}</strong></p>
       <p>Win rate: <strong>${winRate.toFixed(
-        2
-      )}%</strong> (${wins}/${totalGames})</p>`;
+      2
+    )}%</strong> (${wins}/${totalGames})</p>`;
 }
 
-let currentMonthItems = null; 
-let currentMonthLabel = null; 
-let currentDayItems = null;   
-let currentDayLabel = null;   
+let currentMonthItems = null;
+let currentMonthLabel = null;
+let currentDayItems = null;
+let currentDayLabel = null;
 
 function showMonths() {
   currentView = 'months';
@@ -258,7 +257,7 @@ backBtn.onclick = () => {
   } else if (currentView === 'multi' || 'months') {
     // Go back to home
     currentView = 'months';
-     // reset view
+    // reset view
     homeOptions.style.display = "";
     backBtn.style.display = "";
     summaryDiv.style.display = "none";
@@ -267,4 +266,3 @@ backBtn.onclick = () => {
     mode = null; // reset mode
   }
 };
-

@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Arbitrage Calculator</title>
+  <link rel="stylesheet" href="styles.css">
+
+</head>
+
+<body>
+  <div class="wrap">
+    <h1>Arbitrage / Min-loss Calculator</h1>
+
+    <div class="card">
+      <div class="form-row">
+        <label>Odds W1</label>
+        <input id="odds1" type="number" step="0.01" min="1.01" value="3.05">
+      </div>
+      <div class="form-row">
+        <label>Odds X</label>
+        <input id="oddsX" type="number" step="0.01" min="1.01" value="3.65">
+      </div>
+      <div class="form-row">
+        <label>Odds W2</label>
+        <input id="odds2" type="number" step="0.01" min="1.01" value="2.15">
+      </div>
+      <div class="form-row">
+        <label>Total stake</label>
+        <input id="stakeTotal" type="number" step="1" min="1" value="1000">
+      </div>
+
+      <div class="controls">
+        <button id="calcBtn" class="btn">Calculate</button>
+        <button id="preset500" class="btn secondary">₹500</button>
+        <button id="preset1000" class="btn secondary">₹1,000</button>
+        <button id="preset2000" class="btn secondary">₹2,000</button>
+      </div>
+    </div>
+
+    <div class="card result" id="resultBox"></div>
+
+    <div class="card">
+      <div class="row">
+        <div>A (sum of implied probs)</div>
+        <div id="summaryA" class="big">—</div>
+      </div>
+      <div class="row">
+        <div>Arbitrage?</div>
+        <div id="arbBadge" class="big">—</div>
+      </div>
+      <table>
+        <thead>
+          <tr>
+            <th>Outcome</th>
+            <th>Odds</th>
+            <th>Stake</th>
+            <th>Return</th>
+            <th>Profit</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>W1</td>
+            <td id="tblOdds1">—</td>
+            <td id="tblStake1">—</td>
+            <td id="tblReturn1">—</td>
+            <td id="tblProfit1">—</td>
+          </tr>
+          <tr>
+            <td>X</td>
+            <td id="tblOddsX">—</td>
+            <td id="tblStakeX">—</td>
+            <td id="tblReturnX">—</td>
+            <td id="tblProfitX">—</td>
+          </tr>
+          <tr>
+            <td>W2</td>
+            <td id="tblOdds2">—</td>
+            <td id="tblStake2">—</td>
+            <td id="tblReturn2">—</td>
+            <td id="tblProfit2">—</td>
+          </tr>
+        </tbody>
+      </table>
+      <footer>Tip: A &lt; 1 = arbitrage exists. A &gt; 1 = no arbitrage, equalized stakes minimize worst-case loss.
+      </footer>
+    </div>
+  </div>
+
+
+  <script src="script.js"></script>
+</body>
+
+</html>
